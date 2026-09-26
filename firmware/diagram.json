@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "author": "Yassine Basbassi",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -80,
+      "left": 220,
+      "attrs": {
+        "temperature": "25",
+        "humidity": "50"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledGreen",
+      "top": 100,
+      "left": 220,
+      "attrs": {
+        "color": "green"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledRed",
+      "top": 180,
+      "left": 220,
+      "attrs": {
+        "color": "red"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resGreen",
+      "top": 100,
+      "left": 130,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "resRed",
+      "top": 180,
+      "left": 130,
+      "attrs": {
+        "value": "220"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "dht1:VCC",
+      "esp:3V3",
+      "red",
+      []
+    ],
+    [
+      "dht1:GND",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "dht1:SDA",
+      "esp:15",
+      "green",
+      []
+    ],
+    [
+      "esp:13",
+      "resGreen:1",
+      "green",
+      []
+    ],
+    [
+      "resGreen:2",
+      "ledGreen:A",
+      "green",
+      []
+    ],
+    [
+      "ledGreen:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:12",
+      "resRed:1",
+      "red",
+      []
+    ],
+    [
+      "resRed:2",
+      "ledRed:A",
+      "red",
+      []
+    ],
+    [
+      "ledRed:C",
+      "esp:GND.1",
+      "black",
+      []
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# SQLite database
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# Streamlit
+.streamlit/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Python test/cache
+.pytest_cache/
+.coverage
+
+# Generated plots
+analysis/plots/
+
+# Logs
+*.log
